@@ -47,11 +47,11 @@ function CObj(N, img, w, h) {
     this.movbulb = movbulb;
 }
 
-// document.onmousemove = function (e) {
-//     if (window.event) e = window.event;
-//     xm = document.body.scrollLeft + (e.x || e.clientX);
-//     ym = document.body.scrollTop + (e.y || e.clientY);
-// };
+document.onmousemove = function (e) {
+    if (window.event) e = window.event;
+    xm = document.body.scrollLeft + (e.x || e.clientX);
+    ym = document.body.scrollTop + (e.y || e.clientY);
+};
 
 function run() {
     for (var i in Loves) Loves[i].movbulb();
