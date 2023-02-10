@@ -1,19 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>canvas 编辑文本</title>
-        <link rel="icon" href="/img/favicon.ico" />
-        <script
-            type="module"
-            crossorigin
-            src="assets/index.9cf28785.js"
-        ></script>
-        <link rel="stylesheet" href="assets/index.fe0f84ee.css" />
-    </head>
-    <body>
-        <div class="canvas-editor" id="editor"></div>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>canvas 编辑文本</title>
+  <script type="module" crossorigin src="./assets/index.7a6745d1.js"></script>
+  <link rel="stylesheet" href="./assets/index.9b40abf5.css">
+</head>
+<body>
+    <div class="editor-tools">
+        <div class="tool-btn" onclick="setAddFontSize()">
+            <img src="./assets/font-add.d3780d35.svg" alt="">
+        </div>
+        <div class="tool-btn" onclick="setReduceFontSize()">
+            <img src="./assets/font-reduce.009364c1.svg" alt="">
+        </div>
+        <div class="tool-btn tool-btn-bold" onclick="setFontBold()">
+            <img src="./assets/font-bold.43bfa58f.svg" alt="">
+        </div>
+        <div class="tool-btn tool-btn-italic" onclick="setFontItalic()">
+            <img src="./assets/font-italic.e8dc9875.svg" alt="">
+        </div>
+        <div class="tool-btn tool-btn-underline" onclick="setFontUnderLine()">
+            <img src="./assets/font-underline.5384d8eb.svg" alt="">
+        </div>
+        <div class="tool-btn tool-btn-strikeout" onclick="setFontStrikeout()">
+            <img src="./assets/font-strikeout.5337900c.svg" alt="">
+        </div>
+        <div class="tool-btn tool-font-color">
+            <img src="./assets/font-color.fd12afd2.svg" alt="">
+            <input type="color" oninput="setFontColor(event)" />
+        </div>
+    </div>
+    <div class="canvas-editor" id="editor"></div>
+    
+</body>
 </html>
