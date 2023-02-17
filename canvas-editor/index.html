@@ -5,11 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>canvas 编辑文本</title>
-  <script type="module" crossorigin src="./assets/index.1f0bf731.js"></script>
-  <link rel="stylesheet" href="./assets/index.9b40abf5.css">
+  <script type="module" crossorigin src="./assets/index.b49d89cc.js"></script>
+  <link rel="stylesheet" href="./assets/index.d638b073.css">
 </head>
 <body>
     <div class="editor-tools">
+        <div class="tool-btn-select">
+            <select id="fontFamilySelect"></select>
+        </div>
         <div class="tool-btn" onclick="setAddFontSize()">
             <img src="./assets/font-add.d3780d35.svg" alt="">
         </div>
@@ -31,6 +34,15 @@
         <div class="tool-btn tool-font-color">
             <img src="./assets/font-color.fd12afd2.svg" alt="">
             <input type="color" oninput="setFontColor(event)" />
+        </div>
+        <div class="tool-btn tool-btn-align active" data-align="left" onclick="setAlign('left')">
+            <img src="./assets/align-left.0388fed8.svg" alt="">
+        </div>
+        <div class="tool-btn tool-btn-align" data-align="center" onclick="setAlign('center')">
+            <img src="./assets/align-center.c8231db6.svg" alt="">
+        </div>
+        <div class="tool-btn tool-btn-align" data-align="right" onclick="setAlign('right')">
+            <img src="./assets/align-right.d3656cf7.svg" alt="">
         </div>
     </div>
     <div class="canvas-editor" id="editor"></div>
